@@ -35,29 +35,33 @@
     </main>
     <script>
         let x = 0
-        let image1 =""
-        let element1 = ""    
-                function turnImage(element, img) {
-                    if (x == 1) {
-                        if (img == image1) {
-                            element.style.background="green"
-                            x = 0
-                            console.log("bra jobba")
-                        } else {
-                            element.style
-                            element1.style.background = "blue"
-                            element.style.background = "blue"
-                            x = 0
-                        }
+        let image1 = ""
 
-
-                    } else {
-                        let elemnet1 = element
-                        image1 = img
-                        element.style.background = "green"
-                        x++
-                    }
+        function turnImage(element, img) {
+            let open = document.getElementById("open")
+            if (x == 1) {
+                if (img == image1) {
+                    element.style.background = "green"
+                    x = 0
+                    console.log("bra jobba")
+                    element.removeAttribute("onclick")
+                    open.removeAttribute("onclick")
+                } else {
+                    element.style
+                    open.style.background = "blue"
+                    element.style.background = "blue"
+                    open.removeAttribute('open')
+                    x = 0
                 }
+
+
+            } else {
+                element.id = "open"
+                image1 = img
+                element.style.background = "green"
+                x++
+            }
+        }
     </script>
 </body>
 
