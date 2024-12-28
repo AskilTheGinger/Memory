@@ -13,7 +13,15 @@ let images_array = [
 ]
 let x = 0
 let image1 = ""
+let openedImage = document.getElementsByClassName("opened")
 
+function wrong(){
+    for (let i = 0; i < openedImage.length;) {
+        openedImage[i].classList.replace("opened", "closed")
+        console.log(openedImage)
+        x=0
+    }
+} 
 //Fisher-Yates shuffle som er den mest populære korrekte måten å shuffle en array.
 function shuffle(array) {
     let currentIndex = array.length;
@@ -31,31 +39,25 @@ function shuffle(array) {
     }
 }
 function turnImage(element) {
-    let openedImage = document.getElementsByClassName("opened")
     console.log(openedImage)
     if (x == 1 && element.classList.contains("closed") === true){
 
         if (element.getAttribute("style") === image1) {
-
             x = 0
             element.classList.replace("closed", "opened")
             console.log("bra jobba")
-            
             for (let i = 0; i < openedImage.length;) {
                 openedImage[i].classList.replace("opened", "cleared")
-
             }
         } else {
-            for (let i = 0; i < openedImage.length;) {
-                openedImage[i].classList.replace("opened", "closed")
-                console.log(openedImage)
-            }
-            x = 0
+            x++
+            element.classList.replace("closed", "opened")
+            setTimeout(wrong, 1000)
         }
 
 
-    } else {
-        element.id = "open"
+    } else if( x < 1 &&element.classList.contains("closed") === true) {
+        
         console.log(element.classList)
         element.classList.replace("closed", "opened")
     //Henter bakgrunnsbildet som elementet har og lagrer det som en string
@@ -75,7 +77,6 @@ function assignImage(){
         children[i].style.backgroundImage = `url('bilder/${doubleImage[i]}')`;
         children[i].style.backgroundSize = 'cover'; // Ensure the image covers the entire div
         children[i].style.backgroundPosition = 'center'; // Center the image
-        
     }
 }
 assignImage()
