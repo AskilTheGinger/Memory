@@ -8,6 +8,7 @@ img {
     width: 100%;
 }
 
+
 main {
     display: grid;
     height: 100vh;
@@ -22,7 +23,19 @@ main {
 .gridd {
     height: auto;
     width: 100%;
-    background-color: blue;
+
     z-index: 100;
+
+}
+
+.closed {
+    background-color: blue ;
+    background-image: none !important;
+}
+
+.opened {
+    
+}
+.cleared{
 
 }

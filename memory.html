@@ -5,79 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <main>
-        <div class="gridd" onclick="turnImage(this,'halla' )"></div>
-        <div class="gridd" onclick="turnImage(this,'halla')"></div>
-        <div class="gridd" onclick="turnImage(this,'lø')"></div>
-        <div class="gridd"></div>
-        <div class="gridd"></div>
-        <div class="gridd"></div>
-        <div class="gridd"></div>
-        <div class="gridd"></div>
-        <div class="gridd"></div>
-        <div class="gridd"></div>
-        <div class="gridd"></div>
-        <div class="gridd"></div>
-        <div class="gridd"></div>
-        <div class="gridd"></div>
-        <div class="gridd"></div>
-        <div class="gridd"></div>
-        <div class="gridd"></div>
-        <div class="gridd"></div>
-        <div class="gridd"></div>
-        <div class="gridd"></div>
-
-
+    <main id="main">
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
+        <div class="gridd closed" onclick="turnImage(this)"></div>
     </main>
-    <script>
-        images_array[
-            'flodhest.jpg',
-            'hest.jpg',
-            'hund.jpg',
-            'katt.jpg',
-            'løve.jpg',
-            'skilpadde.jpg',
-            'slange.jpg',
-            'elg.jpg',
-            'Mus.jpg',
-            'sjiraff.jpg'
-
-        ]
-        let x = 0
-        let image1 = ""
-        
-        for(let i = 0; i<20;  i++ )
-        
-
-        function turnImage(element, img) {
-            let open = document.getElementById("open")
-            if (x == 1) {
-                if (img == image1) {
-                    element.style.background = "green"
-                    x = 0
-                    console.log("bra jobba")
-                    element.removeAttribute("onclick")
-                    open.removeAttribute("onclick")
-                } else {
-                    element.style
-                    open.style.background = "blue"
-                    element.style.background = "blue"
-                    open.removeAttribute('open')
-                    x = 0
-                }
-
-
-            } else {
-                element.id = "open"
-                image1 = img
-                element.style.background = "green"
-                x++
-            }
-        }
+    <script src="js/script.js">
     </script>
 </body>
 
