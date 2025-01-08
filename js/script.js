@@ -12,15 +12,19 @@ let images_array = [
 
 ]
 let x = 0
+let forsøk = 7
 let image1 = ""
 let openedImage = document.getElementsByClassName("opened")
-
+let closedImage= document.getElementsByClassName("closed")
 function wrong(){
     for (let i = 0; i < openedImage.length;) {
         openedImage[i].classList.replace("opened", "closed")
         console.log(openedImage)
         x=0
+        
+        document.getElementById("forsøk").innerHTML = "Forsøk: " +  forsøk
     }
+    forsøk--
 } 
 //Fisher-Yates shuffle som er den mest populære korrekte måten å shuffle en array.
 function shuffle(array) {
@@ -54,8 +58,6 @@ function turnImage(element) {
             element.classList.replace("closed", "opened")
             setTimeout(wrong, 1000)
         }
-
-
     } else if( x < 1 &&element.classList.contains("closed") === true) {
         
         console.log(element.classList)
@@ -65,6 +67,11 @@ function turnImage(element) {
         
 
         x++
+    }
+    let closedImage= document.getElementsByClassName("closed")
+    if (closedImage.length < 1){
+        document.getElementById("main").innerHTML= "<h1> BRA JOBBA!! </h1>"
+        console.log("du klarte det wow!")
     }
 }
 function assignImage(){
@@ -80,3 +87,7 @@ function assignImage(){
     }
 }
 assignImage()
+if (closedImage.length == 0){
+    document.getElementById("main").innerHTML= "<h1> BRA JOBBA!! </h1>"
+    console.log("du klarte det wow!")
+}
