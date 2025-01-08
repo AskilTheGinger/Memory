@@ -22,7 +22,7 @@ main {
 }
 #header{
     margin: auto;
-    
+    width: fit-content;
 }
 .gridd {
     height: 150px;

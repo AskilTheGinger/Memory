@@ -43,7 +43,7 @@ function shuffle(array) {
     }
 }
 function turnImage(element) {
-    console.log(openedImage)
+
     if (x == 1 && element.classList.contains("closed") === true){
 
         if (element.getAttribute("style") === image1) {
@@ -73,6 +73,10 @@ function turnImage(element) {
         document.getElementById("main").innerHTML= "<h1> BRA JOBBA!! </h1>"
         console.log("du klarte det wow!")
     }
+    if (forsøk<1){
+        document.getElementById("main").innerHTML= "<h1> DU TAPTE D: </h1>"
+        console.log("du tapte")
+    }
 }
 function assignImage(){
     let doubleImage = images_array.concat(images_array)
@@ -87,7 +91,4 @@ function assignImage(){
     }
 }
 assignImage()
-if (closedImage.length == 0){
-    document.getElementById("main").innerHTML= "<h1> BRA JOBBA!! </h1>"
-    console.log("du klarte det wow!")
-}
+
