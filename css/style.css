@@ -29,6 +29,7 @@ main {
     border-radius: 10px;
 }
 #header{
+    padding: 20px;
     margin: auto;
     width: fit-content;
 }
