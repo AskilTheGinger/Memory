@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: white;
 }
 
-body{
+body {
     background-color: #35654d;
 }
+
 img {
     width: 100%;
 }
@@ -28,26 +30,29 @@ main {
     border: #1a4b30 solid 1px;
     border-radius: 10px;
 }
-#header{
+
+#header {
     padding: 20px;
     margin: auto;
     width: fit-content;
 }
+
 .gridd {
     height: 150px;
     width: 150px;
-    border-radius:  10px;
+    border-radius: 10px;
 }
 
 .closed {
     background-image: url("../bilder/bakgrunn.png") !important;
     background-size: contain;
 }
-h1{
+
+h1 {
     position: absolute;
     width: fit-content;
     left: 50%;
     top: 50%;
     font-size: 100px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
